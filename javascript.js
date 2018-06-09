@@ -2,15 +2,16 @@ angular.module('portalApp')
 .controller('marketPlaceCtrl', ['$scope', function ($scope) {
 	
 	// mock data
+	$scope.answer = {data:""};
 	$scope.items = [
 		{
 			title:'Clothing',
-			tags: ['tag A', 'tag B', 'tag C'],
+			tags: ['Shirts', 'Shoes', 'Shorts'],
 			details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
 		},
 		{
 			title:'Furniture',
-			tags: ['tag D', 'tag E', 'tag F'],
+			tags: ['Chairs', 'Tables', 'Accessories'],
 			details: 'Mauris cursus, sapien et malesuada ultrices, purus sapien iaculis tellus, quis semper magna est at leo.'
 		},
 		{
@@ -46,6 +47,17 @@ angular.module('portalApp')
 	}
     
     $scope.showForm = function(item){
+        console.log($scope.answer);
     	if(item=='buy') $scope.portalHelpers.showView('buyForm.html', 1);
+        else {
+        	$scope.portalHelpers.showView("shirtsForm.html", 1);
+        }
     }
+    /*
+    $scope.showForm = function(item) 
+    {
+     	if(item=='shirts')
+            $scope.portalHelpers.showView('shirtsForm.html',1);
+    }
+    */
 }]);
