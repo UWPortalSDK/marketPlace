@@ -3,7 +3,6 @@
 	<widget-row ng-repeat="itemName in items" >
 		<widget-cell fill>
             
-            <!-- Clothing -->
 			<select ng-model = "answer.data">
                 
                 <option ng-repeat="tag in itemName.tags"> {{tag}} 
@@ -39,11 +38,14 @@
 </script>
 
 <script type="text/ng-template" id = "shirtsForm.html">
-    <h1> {{answer.data}} </h1>
-</script>
+    
+    <h1> {{answer.data}} </h1> 
+           <img src = "https://i02.hsncdn.com/desktop/DG27124_053017_ComplexGrid_EC_CellPhones.jpg?v=199">
+     </script>
 
+    
+    
 <script type = "text/ng-template" id = "buyForm.html"> 
     <h2> HI </h2>
 </script>
-
 
