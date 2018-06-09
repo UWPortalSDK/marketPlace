@@ -1,8 +1,14 @@
 <!-- Primary template that will get shown when widget loads -->
 <script type="text/ng-template" id="marketPlaceMain.html"> 
-	<widget-row ng-repeat="item in items" clickable ng-click="showDetails(item)">
+	<widget-row ng-repeat="item in items">
 		<widget-cell fill>
-			<span class="itemName">{{item.title}}</span>
+			<select>
+                
+                <option value="" selected > {{item.title}} </option>
+                <option ng-repeat="tag in item.tags"> {{tag}} </option>
+                
+            </select>
+            
 			<span ng-repeat= "tag in item.tags" class="label label-success">
 				{{tag}}
 			</span>
