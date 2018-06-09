@@ -1,22 +1,28 @@
 <!-- Primary template that will get shown when widget loads -->
 <script type="text/ng-template" id="marketPlaceMain.html"> 
-	<widget-row ng-repeat="item in items" clickable ng-click = >
+	<widget-row ng-repeat="itemName in items" >
 		<widget-cell fill>
-			<select>
-                <option value="" selected > {{item.title}} </option>
-                <option ng-repeat="tag in item.tags"> {{tag}} </option>
+            
+            <!-- Clothing -->
+			<select ng-model = "answer.data">
+                
+                <option ng-repeat="tag in itemName.tags"> {{tag}} 
+                </option>
+                <option value = "" > {{itemName.title}} </option>
                 
             </select>
             
-			<span ng-repeat= "tag in item.tags" class="label label-success">
+            <span ng-repeat= "tag in item.tags" class="label label-success">
 				{{tag}}
 			</span>
+			
 		</widget-cell>
 		<widget-cell>
 			<widget-icon name="angle-right"></widget-icon>
 		</widget-cell>
 	</widget-row>
     <widget-row> 
+         <button class = "btn btn-default" ng-click = "showForm()"> OK </button>
         <button class = "btn btn-default" ng-click = "showForm('buy')"> BUY </button>
     </widget-row>
 </script>
@@ -31,6 +37,9 @@
 	<wr><wc><div class="pDetails">{{detailsItem.details}}</div></wc></wr>
 </script>
 
+<script type="text/ng-template" id = "shirtsForm.html">
+    <h1> {{answer.data}} </h1>
+</script>
 
 <script type = "text/ng-template" id = "buyForm.html"> 
     <h2> HI </h2>
