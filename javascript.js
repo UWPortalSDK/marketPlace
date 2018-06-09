@@ -1,3 +1,4 @@
+// Michael
 angular.module('portalApp')
 .controller('marketPlaceCtrl', ['$scope', function ($scope) {
 	
