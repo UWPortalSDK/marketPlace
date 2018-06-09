@@ -44,4 +44,8 @@ angular.module('portalApp')
 		$scope.detailsItem = item;		
 		$scope.portalHelpers.showView('marketPlaceDetails.html', 2);
 	}
+    
+    $scope.showForm = function(item){
+    	if(item=='buy') $scope.portalHelpers.showView('buyForm.html', 1);
+    }
 }]);
