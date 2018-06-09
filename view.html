@@ -3,7 +3,6 @@
 	<widget-row ng-repeat="item in items">
 		<widget-cell fill>
 			<select>
-                
                 <option value="" selected > {{item.title}} </option>
                 <option ng-repeat="tag in item.tags"> {{tag}} </option>
                 
